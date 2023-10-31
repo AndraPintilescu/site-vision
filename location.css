@@ -1,0 +1,112 @@
+:root {
+  --color-text: #fff;
+  --color-primary: #793fdf;
+  --color-primary-2: #c3acec;
+  --color-primary-3: #d8ceeb;
+  --color-second: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Russo One', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/neon.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 5% 8%;
+  position: relative;
+}
+
+.logo {
+  color: var(--color-text);
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.content {
+  top: 40%;
+  position: absolute;
+  transform: translateY((-50%));
+  color: var(--color-text);
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.time {
+  display: flex;
+}
+
+.time div {
+  flex-basis: 100px;
+}
+
+.time div p {
+  font-size: 4rem;
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .time div p {
+    font-size: 2rem;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-second);
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid var(--color-text);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Când? Unde?</title>
+
+  <!--Link CSS-->
+  <link rel="stylesheet" href="location.css">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="loader"></div>
+
+  <div class="container">
+    <div class="logo">GameFest</div>
+    <div class="content">
+      <p>Evenimentul se va desfășura în clădirea Virgil Madgearu, Calea Dorobanți 15-17.</p>
+      <h1>Evenimentul va începe în: </h1>
+      <div class="time">
+        <div>
+          <p id="days">00</p>
+          <span>Zile</span>
+        </div>
+        <div>
+          <p id="hours">00</p>
+          <span>Ore</span>
+        </div>
+        <div>
+          <p id="minutes">00</p>
+          <span>Minute</span>
+        </div>
+        <div>
+          <p id="seconds">00</p>
+          <span>Secunde</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var countDownDate = new Date("Nov 11, 2023 13:00:00").getTime();
+    var x = setInterval(function(){
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance/(1000*60*60*24));
+      var hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+      var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+      var seconds = Math.floor((distance%(1000*60))/1000);
+      
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      if(distance<0){
+        clearInterval(x);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+
+    },1000);
+
+    window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameFest by Vision 2.0</title>
+
+  <!--Link CSS-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Icon-->
+  <link rel="icon" href="\">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+  <!--FontAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+</head>
+<body>
+
+  <div class="loader"></div>
+
+  <!--First Page-->
+
+  <div class="header">
+    <nav class="navbar">
+      <a href="#"><p class="logo">GameFest</p></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#jocuri">JOCURI</a></li>
+          <li><a href="#parteneri">PARTENERI</a></li>
+          <li><a href="location.html" target="_blank">CÂND? UNDE?</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-data">
+      <h1>GameFest by Vision 2.0</h1>
+      <p>Adună-ți prietenii, adună-ți jocurile, și lasă distracția să înceapă!</p>
+      <a href="formular.html" target="_blank"><button class="btn">Înscrie-te</button></a>
+    </div>
+  </div>
+
+  <!--Jocuri-->
+
+  <section class="jocuri" id="jocuri">
+    <h1>Acestea sunt jocurile pe care le poți juca la GameFest!</h1>
+    <p>O seară de jocuri poate fi o experiență minunată și distractivă, indiferent dacă joci în intimitatea casei tale cu prietenii sau te alături unui grup mai mare într-un local specializat. </p>
+
+    <div class="row">
+      <div class="jocuri-col">
+        <h3>Counter Strike: Global Offensive</h3>
+        <p>CS:GO este un joc de tip first-person shooter, unde jucătorii se află în rolul unor teroriști sau a unor membri ai unei echipe de elită anti-teroriste și participă la meciuri competitive.</p>
+      </div>
+      <div class="jocuri-col">
+        <h3>League of Legends</h3>
+        <p>League of Legends este un MOBA, ceea ce înseamnă că implică două echipe de jucători care se luptă pentru controlul unei hărți, folosind campioni cu abilități unice.</p>
+      </div>
+      <div class="jocuri-col">
+        <h3>Board Games</h3>
+        <p>Există o gamă largă de jocuri de societate, fiecare cu tematici și mecanici unice. Acestea pot fi jocuri de strategie, jocuri de tip "constructie", jocuri de cuvinte, jocuri de rol, jocuri de noroc și multe altele.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Parteneri-->
+
+  <section class="parteneri" id="parteneri">
+    <h1>Parteneri</h1>
+    <div class="row">
+      <div class="parteneri-col">
+        <img src="images/asus.png">
+        <div class="layer">
+          <h3>Powered By</h3>
+        </div>
+      </div>
+      <div class="parteneri-col">
+        <img src="images/redbull-logo.png">
+        <div class="layer">
+          <h3>Financial Partners</h3>
+        </div>
+      </div>
+      <div class="parteneri-col">
+        <img src="images/radio zu.jpg">
+        <div class="layer">
+          <h3>Media Partners</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <p>&copy;<a href="profile-card.html" target="_blank">Vision 2.0</a></p>
+  </sectionn>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formular inscriere</title>
+
+  <!--Link CSS-->
+
+  <link rel="stylesheet" href="formular.css">
+
+  <!--Google Fonts-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+  <!--Boxicons-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--Script-->
+  <script defer src="giava.js"></script>
+
+</head>
+<body>
+
+  <div class="loader"></div>
+
+  <div class="container">
+    <span class="big-circle"></span>
+    <img src="images/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Formular de inscriere:</h3>
+        <p class="text">
+          Dacă aveți întrebări legate de eveniment, ne puteți găsi la:
+        </p>
+        <div class="info">
+          <div class="information">
+            <p>Cladirea Virgil Madgearu, Calea Dorobanți 15-17</p>
+          </div>
+          <div class="information">
+            <p>vision@gmail.com</p>
+          </div>
+          <div class="information">
+            <p>0753707914</p>&nbsp;&nbsp;
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Găsește-ne pe social media:</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/vision2.0_gamefest/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="link" target="_blank">
+              <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="/" class="link" target="_blank">
+              <i class='bx bxl-facebook-circle'></i>
+            </a>
+            <a href="/" class="link" target="_blank">
+              <i class='bx bxl-tiktok'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form id="form" action="/salvare" method="post" autocomplete="off" enctype="multipart/form-data">
+          <h3 class="title">Înscrie-te!</h3>
+          <div class="input-container">
+            <input type="text" name="nume" class="input" id="nume"/>
+            <label for="nume">Nume</label>
+            <span>Nume</span>
+          </div>
+          <div class="input-container">
+            <input type="text" name="prenume" class="input" id="prenume"/>
+            <label for="prenume">Prenume</label>
+            <span>Prenume</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" id="email"/>
+            <label for="email">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="telefon" class="input" id="telefon"/>
+            <label for="telefon">Telefon</label>
+            <span>Telefon</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="mesaj" class="input" id="mesaj"></textarea>
+            <label for="mesaj">Ce joc vrei să joci?</label>
+            <span>Ce joc vrei să joci?</span>
+          </div>
+          <input type="submit" value="Trimite" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
